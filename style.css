@@ -1,0 +1,51 @@
+.heading {
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 30px;
+}
+
+.quiz-out-frame {
+    width: 600px;
+    margin: 0 auto;
+    padding: 20px 20px;
+    justify-self: center;
+    border: 1px solid black;
+}
+
+.count-frame {
+    margin: 0 0 5px 20px;
+}
+
+#question {
+    min-height: 100px;
+    padding: 10px 20px;
+    border: 1px dashed black;
+}
+
+#choices {
+    display: flex;
+    margin-top: 20px;
+    justify-content: center;
+}
+
+.choice {
+    border: 1px solid #666;
+    text-align: center;
+    padding: 5px 20px;
+    cursor: pointer;
+}
+.choice:active {
+    background-color: #bbb;
+}
+.choice + .choice {
+    margin-left: 20px;
+}
+
+.end-message {
+    margin-left: 50px;
+}
+
+.score {
+    margin-top: 28px;
+    text-align: center;
+}
