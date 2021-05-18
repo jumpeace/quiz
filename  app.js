@@ -1,34 +1,34 @@
 const quizzes = [
     {
-        question: '遠藤さくらの誕生日は？',
+        question: '千葉県は何地方？',
         choices: [
             {
-                text: '9月13日',
+                text: '東北地方',
                 isCorrect: false,
             },
             {
-                text: '10月3日',
+                text: '中部地方',
+                isCorrect: false,
+            },
+            {
+                text: '関東地方',
                 isCorrect: true,
-            },
-            {
-                text: '10月8日',
-                isCorrect: false,
             },
         ]
     },
     {
-        question: '遠藤さくらが初めてセンターをした表題曲は？',
+        question: 'チーバくんの悩みとは？',
         choices: [
             {
-                text: '帰り道は遠回りしたくなる',
+                text: '足に手が届かない',
                 isCorrect: false,
             },
             {
-                text: 'Sing Out!',
+                text: '耳をかけない',
                 isCorrect: false,
             },
             {
-                text: '夜明けまで強がらなくてもいい',
+                text: '頭を洗えない',
                 isCorrect: true,
             },
         ]
