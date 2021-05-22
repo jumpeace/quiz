@@ -42,10 +42,16 @@
 }
 
 .end-message {
-    margin-left: 50px;
+    /* margin-left: 50px; */
+    text-align: center;
 }
 
 .score {
     margin-top: 28px;
+    text-align: center;
+}
+
+.twitter-share-container {
+    margin-top: 20px;
     text-align: center;
 }

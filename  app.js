@@ -5,21 +5,13 @@ const sha256 = async(text) => {
     return Array.from(new Uint8Array(digest)).map(v => v.toString(16).padStart(2, '0')).join('')
 }
 
-const setupDisplay = () => {
-    $('.quiz-out-frame').html(`<div class="count-frame"><span id="quiz-count"></span>問目 / ${quizNum}問</div><div id="question"></div><div id="choices"></div>`)
-}
-
-const renderResult = () => {
-    $('.quiz-out-frame').html(`<div class="end-message">終了!!</div><div class="score">${correctCount}問 / ${quizNum}問 正解</div><div><a href="https://twitter.com/share?url=https://jpig-com.github.io/quiz-test/&text=クイズ ${correctCount}問 / ${quizNum}問 正解&hashtags=theQuiz" class="twitter-share-button" data-show-count="false">Tweet</a></div>`);
-}
-
 const quizzes = [
     {
         question: '千葉県は何地方？',
         choices: [
             '東北地方',
-            '中部地方',
             '関東地方',
+            '中部地方',
         ],
         answer: 'cd2dff2d37e2c2328708999f6f8e56bfea52a5dbc14b07e2d94c8c9349e87e57',
     },
@@ -34,8 +26,22 @@ const quizzes = [
     }
 ];
 
-const quizNum = quizzes.length;
+const quizNum = 0;
+// const quizNum = 0;
 let correctCount = 0;
+
+const setupDisplay = () => {
+    $('.quiz-out-frame').html(`<div class="count-frame"><span id="quiz-count"></span>問目 / ${quizNum}問</div><div id="question"></div><div id="choices"></div>`)
+}
+
+const renderResult = () => {
+    const twitterShare = {
+        url: 'https://jpig-com.github.io/quiz-test/',
+        text: `${correctCount}問 / ${quizNum}問 正解しました！%0a%0a`,
+        hashtags: 'q_quiz'
+    }
+    $('.quiz-out-frame').html(`<div class="end-message">終了!!</div><div class="score">${correctCount}問 / ${quizNum}問 正解</div><div class="twitter-share-container"><a href="https://twitter.com/share?url=${twitterShare.url}&text=${twitterShare.text}&hashtags=${twitterShare.hashtags}" class="twitter-share-button" data-show-count="true" data-size=large>Tweet</a></div>`);
+}
 
 const setupQuiz = (quizCount) => {
     if (quizCount > quizNum - 1) {
