@@ -26,8 +26,7 @@ const quizzes = [
     }
 ];
 
-const quizNum = 0;
-// const quizNum = 0;
+const quizNum = quizzes.length;
 let correctCount = 0;
 
 const setupDisplay = () => {
