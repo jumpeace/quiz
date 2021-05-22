@@ -10,7 +10,7 @@ const setupDisplay = () => {
 }
 
 const renderResult = () => {
-    $('.quiz-out-frame').html(`<div class="end-message">終了!!</div><div class="score">${correctCount}問 / ${quizNum}問 正解</div><div><a href="https://twitter.com/share?url=https://google.com&text=クイズ ${correctCount}問 / ${quizNum}問 正解&hashtags=theQuiz" class="twitter-share-button" data-show-count="false">Tweet</a></div>`);
+    $('.quiz-out-frame').html(`<div class="end-message">終了!!</div><div class="score">${correctCount}問 / ${quizNum}問 正解</div><div><a href="https://twitter.com/share?url=https://jpig-com.github.io/quiz-test/&text=クイズ ${correctCount}問 / ${quizNum}問 正解&hashtags=theQuiz" class="twitter-share-button" data-show-count="false">Tweet</a></div>`);
 }
 
 const quizzes = [
