@@ -36,11 +36,11 @@ const setupDisplay = () => {
 
 const renderResult = () => {
     const twitterShare = {
-        url: 'https://jpig-com.github.io/quiz-test/',
+        url: 'https://jpig-com.github.io/quiz-test',
         text: `${correctCount}問 / ${quizNum}問 正解しました！%0a%0a`,
         hashtags: 'q_quiz'
     }
-    $('.quiz-out-frame').html(`<div class="end-message">終了!!</div><div class="score">${correctCount}問 / ${quizNum}問 正解</div><div class="twitter-share-container"><a href="https://twitter.com/share?url=${twitterShare.url}&text=${twitterShare.text}&hashtags=${twitterShare.hashtags}" class="twitter-share-button" data-show-count="true" data-size=large>Tweet</a></div>`);
+    $('.quiz-out-frame').html(`<div class="end-message">終了!!</div><div class="score">${correctCount}問 / ${quizNum}問 正解</div><div class="twitter-share-container"><a href="https://twitter.com/share?text=${twitterShare.text}&hashtags=${twitterShare.hashtags}" class="twitter-share-button" data-show-count="true" data-size=large>Tweet</a></div>`);
 }
 
 const setupQuiz = (quizCount) => {
